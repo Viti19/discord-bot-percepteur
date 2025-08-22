@@ -21,6 +21,9 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return "🚨 Alerte Percepteur Bot is running on Render! 🚨"
+@app.route('/ping')
+def ping():
+    return "🚨 PONG - Alerte Percepteur Online 🚨"
 @app.route('/health')
 def health():
     return {"status": "online", "bot": "Alerte Percepteur"}
